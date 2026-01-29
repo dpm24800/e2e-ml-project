@@ -112,7 +112,6 @@ Trained models and preprocessing artifacts will be saved to the `artifacts/` dir
 ### Streamlit Preview
 ![Streamlit UI Preview](trash/streamlit_preview.png)
 
-<br>
 ### Flask Preview
 ![Flask UI Preview](trash/flask_preview.png)
 
@@ -147,4 +146,5 @@ Distributed under the MIT License. See [LICENSE](LICENSE) for details.
 
 Dipak Pulami Magar – [@dpm24800](https://github.com/dpm24800)  
 Project Link: https://github.com/dpm24800/ml-project
+
 
