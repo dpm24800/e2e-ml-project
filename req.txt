@@ -1,19 +1,24 @@
+# Packaging / Build
 setuptools
+-e .
 
+# Data Processing
 numpy
 pandas
 
-matplotlib
-seaborn
-
+# Machine Learning Frameworks
 scikit-learn
 catboost
 xgboost
+
+# Model Serialization
 dill
 
+# Visualization
+matplotlib
+seaborn
 altair==4.2.2
 
+# Web Applications
 flask
 streamlit>=1.23.0
-
--e .

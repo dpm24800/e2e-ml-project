@@ -1,7 +1,0 @@
-flowchart TD
-    A[Exception] --> B[CustomException<br>adds file/line context]
-    B --> C[Logger writes to<br>timestamped log file]
-    C --> D{Execution Context}
-    D -->|Training| E[Abort pipeline<br>exit code 1]
-    D -->|Prediction| F[Return friendly error<br>to user interface]
-    D -->|Development| G[Print full traceback<br>for debugging]

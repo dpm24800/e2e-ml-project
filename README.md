@@ -5,7 +5,6 @@
 Student Performance Predictor is an end-to-end machine learning project that predicts students' math scores based on demographic and academic attributes. Built with a production-ready pipeline architecture and deployed via both Flask and Streamlit interfaces.
 
 ## Project Overview
-
 This project demonstrates a complete ML workflow:
 
 - self.Exploratory Data Analysis (EDA)
@@ -16,7 +15,6 @@ This project demonstrates a complete ML workflow:
 - self.Web deployment (Flask + Streamlit)
 
 Predict math scores using 7 key features:
-
 - Gender
 - Race/Ethnicity
 - Parental level of education
@@ -36,17 +34,20 @@ ml-project/
 │   ├── __init__.py
 │   ├── components/           # Data ingestion, transformation modules
 │   │   ├── data_ingestion.py
-│   │   └── data_transformation.py
+│   │   ├── data_transformation.py
+│   │   └── model_trainer.py
 │   ├── pipeline/             # Training & prediction pipelines
 │   │   ├── predict_pipeline.py
 │   │   └── train_pipeline.py
 │   ├── exception.py          # Custom exception handling
-│   └── logger.py             # Logging configuration
+│   ├── logger.py             # Logging configuration
+│   └── utils.py              # Utility functions
 ├── templates/                # Flask HTML templates
-├── flask_app.py              # Flask web application (port 8000)
-├── streamlit_app.py          # Streamlit interactive UI
+├── flask-app.py              # Flask web application (port 8000)
+├── streamlit-app.py          # Streamlit interactive UI
 ├── requirements.txt          # Project dependencies
 ├── setup.py                  # Package configuration
+├── train.py                  # Training script
 └── README.md
 ```
 
@@ -55,8 +56,8 @@ ml-project/
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/dpm24800/ml-project.git
-cd ml-project
+git clone https://github.com/dpm24800/student-performance-predictor.git
+cd student-performance-predictor
 ```
 
 2. **Create a virtual environment (recommended)**
@@ -79,7 +80,7 @@ pip install -r requirements.txt
 ### Option 1: Streamlit Interface (Recommended)
 
 ```bash
-streamlit run streamlit_app.py
+streamlit run streamlit-app.py
 ```
 
 → Open http://localhost:8501 in your browser
@@ -87,7 +88,7 @@ streamlit run streamlit_app.py
 ### Option 2: Flask Application
 
 ```bash
-python flask_app.py
+python flask-app.py
 ```
 
 → Open http://localhost:8000 in your browser
@@ -95,7 +96,6 @@ python flask_app.py
 ## Model Training
 
 To retrain the model:
-
 1. Explore data and experiment in `notebook/` directory
 2. Run training pipeline:
 
@@ -129,7 +129,6 @@ Key libraries used:
 See [`requirements.txt`](requirements.txt) for full dependency list.
 
 ## Contributing
-
 Contributions are welcome! Please follow these steps:
 
 1. Fork the repository
@@ -139,7 +138,6 @@ Contributions are welcome! Please follow these steps:
 5. Open a Pull Request
 
 ## License
-
 Distributed under the MIT License. See [LICENSE](LICENSE) for details.
 
 ## Contact

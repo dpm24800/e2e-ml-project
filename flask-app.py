@@ -88,7 +88,22 @@ def predict_datapoint():
                 error=error_message
             )
 
+# if __name__ == "__main__":
+#     # app.run(host="0.0.0.0")    
+#     app.run(debug=True, port=8000)  # port: optional, for other  
+#     # app.run(debug=False, use_reloader=False, port=8000)
+
+# if __name__ == "__main__":
+#     url = "http://127.0.0.1:8000/"
+#     print(f"\nYour Flask app is running! Click or Ctrl+Click to open:\n{url}\n")
+    
+#     app.run(debug=True, use_reloader=False, port=8000)
+
+import os
+
 if __name__ == "__main__":
-    # app.run(host="0.0.0.0")    
-    app.run(debug=True, port=8000)  # port: optional, for other  
-    # app.run(debug=False, use_reloader=False, port=8000)
+    if os.environ.get("WERKZEUG_RUN_MAIN") == "true":
+        url = "http://127.0.0.1:8000/"
+        print(f"\n✅ Your Flask app is running! \n Ctrl + Click to open: {url}\n")
+    
+    app.run(debug=True, port=8000)
